@@ -1,4 +1,4 @@
-// Sample data structure containing classmates' birthdays
+
 const classmates = [
     { name:	"Antonio Dentamaro" , birthday: "2024-02-23" },
     { name:	"Davide Losurdo" , birthday: "2024-05-03" },
@@ -24,7 +24,6 @@ const classmates = [
     { name:	"Martina Gisonda" , birthday: "2025-05-29" },
     
 
-    // Add more classmates with their birthdays here
 ];
 
 // Function to calculate the next upcoming birthday
