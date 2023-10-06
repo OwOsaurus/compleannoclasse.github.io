@@ -53,7 +53,7 @@ function updateNextBirthday() {
 
     if (nextBirthday) {
         const daysLeft = Math.ceil((nextBirthday.birthdayDate - new Date()) / (1000 * 60 * 60 * 24));
-        document.getElementById("nextBirthday").innerHTML = `Tra ${daysLeft} giorni è il compleanno di ${nextBirthday.name}`;
+        document.getElementById("nextBirthday").innerHTML = `${nextBirthday.name} compirà 18 anni tra ${daysLeft} giorni.`;
     } else {
         document.getElementById("nextBirthday").innerHTML = "No upcoming birthdays.";
     }
