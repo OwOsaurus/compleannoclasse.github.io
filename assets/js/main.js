@@ -23,7 +23,6 @@ const classmates = [
     { name: "Angelo Schilardi" , birthday: "2025-04-02" },
     { name: "Martina Gisonda" , birthday: "2025-05-29" },
     
-
 ];
 
 // Function to calculate the next upcoming birthday
