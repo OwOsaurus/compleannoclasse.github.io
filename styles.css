@@ -1,0 +1,33 @@
+.birthday-card {
+    margin: 10px;
+    overflow: hidden;
+}
+
+.card-title {
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+@media (min-width: 576px) {
+    .birthday-card {
+        flex: 0 0 calc(33% - 20px);
+        max-width: calc(33% - 20px);
+    }
+}
+
+.container {
+    width: 100%; 
+}
+
+
+body {
+    background-color: #272829;
+}
+
+h1{
+    color: aliceblue; 
+    text-align: center; 
+    margin: 10px;
+}
+
