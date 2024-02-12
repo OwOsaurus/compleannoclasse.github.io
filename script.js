@@ -1,4 +1,5 @@
 const classmates = [
+    { name: "Mattia Mastrodomenico" , birthday: "2023-05-10" },
     { name: "Antonio Dentamaro" , birthday: "2024-02-23" },
     { name: "Davide Losurdo" , birthday: "2024-05-03" },
     { name: "Ruben Di desidero" , birthday: "2024-05-17" },
@@ -48,6 +49,8 @@ function updateBirthdayUI() {
         dateText.className = "card-text font-weight-bold";
         
         if (daysLeft === 0) {
+            cardText.innerHTML = "Auguri di buon compleanno!";
+        }else if (daysLeft<0) {
             cardText.innerHTML = "Auguri di buon compleanno!";
         } else {
             cardText.innerHTML = `Compirà 18 anni tra <strong>${daysLeft} giorni</strong>.`;
