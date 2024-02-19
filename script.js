@@ -9,6 +9,7 @@ const classmates = [
     { name: "Nicolo' Pio Iurlo", birthday: "2024-07-10" },
     { name: "Alessandro Gadaleta", birthday: "2024-07-22" },
     { name: "Claudio Spaziani", birthday: "2024-07-27" },
+    { name: "Alex Gesuito", birthday: "2024-08-21" },
     { name: "Costantino Scalera", birthday: "2024-09-04" },
     { name: "Fabio Masi", birthday: "2024-09-21" },
     { name: "Vito Conteduca", birthday: "2024-09-30" },
@@ -48,6 +49,7 @@ function updateBirthdayUI() {
             const secondsLeft = Math.max(0, Math.floor(timeLeft / 1000) % 60);
 
             message = `(${daysLeft.toString().padStart(2, '0')}:${hoursLeft.toString().padStart(2, '0')}:${minutesLeft.toString().padStart(2, '0')}:${secondsLeft.toString().padStart(2, '0')})`;
+
         } else if (currentDate > birthdayDate) {
             message = `Ha compiuto 18 anni`;
         } else {
@@ -72,6 +74,11 @@ function updateBirthdayUI() {
         countdownDiv.className = "countdown";
         countdownDiv.style.fontWeight = "bold";
         countdownDiv.innerHTML = message;
+
+        const exactDateText = document.createElement("p");
+        exactDateText.className = "card-text";
+        exactDateText.textContent = `${birthdayDate.toLocaleDateString()}`;
+        cardBody.appendChild(exactDateText);
 
         if (currentDate < birthdayDate) {
             const smallText = document.createElement("small");
