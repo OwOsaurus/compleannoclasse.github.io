@@ -39,9 +39,17 @@ function updateBirthdayUI() {
 
         const birthdayDate = new Date(classmate.birthday);
         const currentDate = new Date();
+        
+        console.log("Current Date:", currentDate);
+        console.log("Birthday Date:", birthdayDate);
+
         let message = '';
 
-        if (currentDate < birthdayDate) {
+        if (currentDate.getFullYear() === birthdayDate.getFullYear() && 
+            currentDate.getMonth() === birthdayDate.getMonth() &&
+            currentDate.getDate() === birthdayDate.getDate()) {
+            message = '<p class="rainbow">Auguri di buon compleanno!</p>';
+        } else if (currentDate < birthdayDate) {
             const timeLeft = birthdayDate - currentDate;
             const daysLeft = Math.max(0, Math.floor(timeLeft / (1000 * 60 * 60 * 24)));
             const hoursLeft = Math.max(0, Math.floor(timeLeft / (1000 * 60 * 60)) % 24);
@@ -49,11 +57,8 @@ function updateBirthdayUI() {
             const secondsLeft = Math.max(0, Math.floor(timeLeft / 1000) % 60);
 
             message = `(${daysLeft.toString().padStart(2, '0')}:${hoursLeft.toString().padStart(2, '0')}:${minutesLeft.toString().padStart(2, '0')}:${secondsLeft.toString().padStart(2, '0')})`;
-
-        } else if (currentDate > birthdayDate) {
-            message = `Ha compiuto 18 anni`;
         } else {
-            message = "Auguri di buon compleanno!";
+            message = `Ha compiuto 18 anni`;
         }
 
         const card = document.createElement("div");
