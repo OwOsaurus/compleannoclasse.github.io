@@ -1,0 +1,42 @@
+.birthday-card {
+    margin: 10px;
+    overflow: hidden;
+}
+
+.card-title {
+    white-space: nowrap; 
+    opacity: 95%;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+@media (min-width: 576px) {
+    .birthday-card {
+        flex: 0 0 calc(33% - 20px);
+        max-width: calc(33% - 20px);
+    }
+}
+
+.container {
+    width: 100%; 
+}
+
+.countdown{
+    font-size: 30px;
+}
+
+body {
+    background-image: linear-gradient(to right, #845EC2, #2C73D2, #0089BA, #008E9B);
+}
+
+h1, h2{
+    color: aliceblue; 
+    text-align: center; 
+    margin: 10px;
+}
+
+.search{
+    margin-left: 20%;
+    margin-right: 20%;
+    opacity: 85%;
+}
