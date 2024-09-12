@@ -13,7 +13,7 @@ const classmates = [
     { name: "Fabio Masi", birthday: "2024-09-21" },
     { name: "Vito Conteduca", birthday: "2024-09-30" },
     { name: "Vito Albergo", birthday: "2024-10-28" },
-{ name: "Alex Gesuito", birthday: "2024-11-21" },
+    { name: "Alex Gesuito", birthday: "2024-11-21" },
     { name: "Simone Loglisci", birthday: "2024-11-28" },
     { name: "Ilaria Mincuzzi", birthday: "2024-12-01" },
     { name: "Gianluca Carella", birthday: "2024-12-05" },
